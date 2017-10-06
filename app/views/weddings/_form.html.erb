@@ -1,0 +1,73 @@
+<%= form_with(model: wedding, local: true) do |form| %>
+  <% if wedding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(wedding.errors.count, "error") %> prohibited this wedding from being saved:</h2>
+
+      <ul>
+      <% wedding.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <table class="table">
+      <%= form_for :wedding do |f| %>
+      Wedding Name: <%= f.text_field :name %>
+
+        <tbody>
+            <tr>
+              <th></th>
+              <%= f.fields_for :pricelist do |ee| %>
+                <td>Name</td>
+                <td>Bride Hair <%= ee.number_field :bride_hair, value: 100 %></td>
+                <td>Reg Hair <%= ee.number_field :regular_hair, value: 80 %></td></td>
+                <td>Bride Makeup <%= ee.number_field :bride_makeup, value: 70 %></td></td>
+                <td>Regular Makeup <%= ee.number_field :regular_makeup, value: 50 %></td></td>
+                <td>Lashes <%= ee.number_field :lashes, value: 15 %></td></td>
+                <% ee.hidden_field wedding.id %>
+              <% end %>
+            </tr>
+            <tr>
+              <th>Person 1:</th>
+              <%= f.fields_for :person do |ff| %>
+                <td><%= ff.text_field :name %></td>
+                <td><%= ff.text_field :bride_hair %></td>
+                <td><%= ff.text_field :reg_hair %></td>
+                <td><%= ff.text_field :bride_makeup %></td>
+                <td><%= ff.text_field :reg_makeup %></td>
+                <td><%= ff.text_field :lashes %></td>
+                  <% ff.hidden_field wedding.id %>
+              <% end %>
+            </tr>
+            <tr>
+              <th>Person 2:</th>
+              <%= f.fields_for :person do |gg| %>
+                <td><%= gg.text_field :name %></td>
+                <td><%= gg.text_field :bride_hair %></td>
+                <td><%= gg.text_field :reg_hair %></td>
+                <td><%= gg.text_field :bride_makeup %></td>
+                <td><%= gg.text_field :reg_makeup %></td>
+                <td><%= gg.text_field :lashes %></td>
+                    <% gg.hidden_field wedding.id %>
+              <% end %>
+            </tr>
+            <tr>
+              <th>Person 3:</th>
+              <%= f.fields_for :person do |hh| %>
+                <td><%= hh.text_field :name %></td>
+                <td><%= hh.text_field :bride_hair %></td>
+                <td><%= hh.text_field :reg_hair %></td>
+                <td><%= hh.text_field :bride_makeup %></td>
+                <td><%= hh.text_field :reg_makeup %></td>
+                <td><%= hh.text_field :lashes %></td>
+                    <% hh.hidden_field wedding.id %>
+              <% end %>
+            </tr>
+        </tbody>
+        <% end %>
+    </table>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+Person	/Users/justinmckelvey/projects/wedding/wedding_calc/app/models/person.rb	/^class Person < ApplicationRecord$/;"	class	line:1
+total	/Users/justinmckelvey/projects/wedding/wedding_calc/app/models/person.rb	/^  def total$/;"	method	line:4	class:Person
+house_percent	/Users/justinmckelvey/projects/wedding/wedding_calc/app/models/person.rb	/^  def house_percent$/;"	method	line:7	class:Person
+keep_percent	/Users/justinmckelvey/projects/wedding/wedding_calc/app/models/person.rb	/^  def keep_percent$/;"	method	line:10	class:Person
+bride_hair_total	/Users/justinmckelvey/projects/wedding/wedding_calc/app/models/person.rb	/^  def bride_hair_total(count)$/;"	method	line:13	class:Person
+Prices	/Users/justinmckelvey/projects/wedding/wedding_calc/db/migrate/20171006045745_prices.rb	/^class Prices < ActiveRecord::Migration[5.1]$/;"	class	line:1
+change	/Users/justinmckelvey/projects/wedding/wedding_calc/db/migrate/20171006045745_prices.rb	/^  def change$/;"	method	line:2	class:Prices
+Pricelists	/Users/justinmckelvey/projects/wedding/wedding_calc/db/migrate/20171006045745_pricelists.rb	/^class Pricelists < ActiveRecord::Migration[5.1]$/;"	class	line:1
+change	/Users/justinmckelvey/projects/wedding/wedding_calc/db/migrate/20171006045745_pricelists.rb	/^  def change$/;"	method	line:2	class:Pricelists
+CreatePricelists	/Users/justinmckelvey/projects/wedding/wedding_calc/db/migrate/20171006050301_create_pricelists.rb	/^class CreatePricelists < ActiveRecord::Migration[5.1]$/;"	class	line:1
+change	/Users/justinmckelvey/projects/wedding/wedding_calc/db/migrate/20171006050301_create_pricelists.rb	/^  def change$/;"	method	line:2	class:CreatePricelists

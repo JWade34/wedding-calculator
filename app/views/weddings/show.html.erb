@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_wedding_path(@wedding) %> |
+<%= link_to 'Back', weddings_path %>
+<table class="table">
+
+  Wedding Name: <%= @wedding.name %>
+    <tbody>
+        <tr>
+          <th></th>
+            <td>Name</td>
+            <td>Bride Hair</td>
+            <td>Reg Hair</td>
+            <td>Bride Makeup</td>
+            <td>Regular Makeup</td>
+            <td>Lashes</td>
+            <td>Total</td>
+            <td></td>
+            <td>70%</td>
+            <td>30%</td>
+        </tr>
+        <%= @wedding.people.each do |p| %>
+        <tr>
+          <th>Person: </th>
+            <td><%= p.name %></td>
+            <td><%= p.bride_hair %></td>
+            <td><%= p.reg_hair %></td>
+            <td><%= p.bride_makeup %></td>
+            <td><%= p.reg_makeup %></td>
+            <td><%= p.lashes %></td>
+            <td><%= p.bride_hair_total(p.bride_hair) %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+</div>
